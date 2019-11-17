@@ -11,7 +11,7 @@ NTSTATUS DriverEntry(PDRIVER_OBJECT driver, PUNICODE_STRING registryPath) {
 
 	driver->DriverUnload = DriverUnload;
 
-	NTSTATUS status = STATUS_SUCCESS; ;
+	NTSTATUS status = STATUS_SUCCESS;
 	if (!NT_SUCCESS(status = SetDiskWpp())) {
 		return status;
 	}
