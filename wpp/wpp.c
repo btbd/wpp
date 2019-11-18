@@ -31,13 +31,13 @@ VOID WppUndo() {
 	}
 }
 
-ULONG WppTraceMessage(VOID *LoggerHandle, ULONG MessageFlags, LPCGUID MessageGuid, USHORT MessageNumber, ...) {
-	UNREFERENCED_PARAMETER(LoggerHandle);
-	UNREFERENCED_PARAMETER(MessageFlags);
-	UNREFERENCED_PARAMETER(MessageGuid);
-	UNREFERENCED_PARAMETER(MessageNumber);
+ULONG WppTraceMessage(VOID *loggerHandle, ULONG messageFlags, LPCGUID messageGuid, USHORT messageNumber, ...) {
+	UNREFERENCED_PARAMETER(loggerHandle);
+	UNREFERENCED_PARAMETER(messageFlags);
+	UNREFERENCED_PARAMETER(messageGuid);
+	UNREFERENCED_PARAMETER(messageNumber);
 
-	CONTEXT context = { 0 };
+	CONTEXT context;
 	RtlCaptureContext(&context);
 
 	PVOID returnAddress = 0;
